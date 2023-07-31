@@ -19,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      fetch("http://54.242.212.77:8080/mobilia-test/ws/Extra?operation=getInvoicesExternal&documentType=CC&documentCode=1095833961")
+      fetch("https://54.242.212.77:8080/mobilia-test/ws/Extra?operation=getInvoicesExternal&documentType=CC&documentCode=1095833961")
       .then((response) => response.json())
       .then((data) => setData(data.receivables))
     } catch(error) {
