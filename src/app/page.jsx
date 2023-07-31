@@ -36,7 +36,9 @@ export default function Home() {
 
 //Creo funcion flecha totalaPagar que toma las variables totalOutstandingBalance y totalPenaltyValue y las igualo a 0
 
-//Hago un foreach del array filteredData en el que hago una funcion flecha, tomo item como parametro y adentro declaro las variables totalOutstandingBalance con el valor que tenga item.outstandingBalance, que es el valor que viene del arreglo
+//Hago un foreach del array filteredData en el que hago una funcion flecha, tomo item como parametro y adentro declaro las variables totalOutstandingBalance con el valor que traiga item.outstandingBalance, que es el valor que viene del arreglo, lo mismo para item.penalty value, guarda el valor de la iteración y lo suma cuando vuelva a iterar
+
+//Hago uso de la variable de estado UseEffect de la linea 59, recibiendo los dos paramétros, data y el filterValue
 
   const filteredData = data.filter(
     (item) => item.contractCode.includes(filterValue)
@@ -50,7 +52,7 @@ export default function Home() {
       totalOutstandingBalance += item.outstandingBalance;
       totalPenaltyValue += item.penaltyValue;
     });
-console.log(totalOutstandingBalance, totalPenaltyValue)
+    console.log(totalOutstandingBalance, totalPenaltyValue)
     return totalOutstandingBalance - totalPenaltyValue;
   };
 
@@ -61,6 +63,8 @@ console.log(totalOutstandingBalance, totalPenaltyValue)
 
 // En la línea 80 llamo la constante filtered data que usa el metodo de array .filter para traer el filterValue; lo mapeo y devuelvo item por cada posición.
 // Imprimo el item iterador con su valor del modelo de datos y lo pinto en cada celda de la tabla
+
+// Creo la constante format que me va a permitir darle formato a los números después de parsearlos.
 
 const format = new Intl.NumberFormat('es-ES')
 
