@@ -19,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      fetch("https://54.242.212.77:8080/mobilia-test/ws/Extra?operation=getInvoicesExternal&documentType=CC&documentCode=1095833961")
+      fetch("http://54.242.212.77:8080/mobilia-test/ws/Extra?operation=getInvoicesExternal&documentType=CC&documentCode=1095833961")
       .then((response) => response.json())
       .then((data) => setData(data.receivables))
     } catch(error) {
@@ -73,7 +73,7 @@ const format = new Intl.NumberFormat('es-ES')
       <Head>
         <link
           rel="stylesheet"
-          href="http://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         />
       </Head>
       <div className='card shadow mt-5 mb-5 p-5' style={{borderRadius: '22px'}}>
