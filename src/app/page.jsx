@@ -73,7 +73,7 @@ const format = new Intl.NumberFormat('es-ES')
       <Head>
         <link
           rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          href="http://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         />
       </Head>
       <div className='card shadow mt-5 mb-5 p-5' style={{borderRadius: '22px'}}>
